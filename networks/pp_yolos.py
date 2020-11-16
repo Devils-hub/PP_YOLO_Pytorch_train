@@ -87,26 +87,6 @@ class ResNet(nn.Module):
         self.layer3 = self._make_layer(256, 6, 2)
         self.layer4 = self._make_layer(512, 3, 2)
 
-        # self.toplayer = nn.Conv2d(2048, 256, 1, 1, 0)
-        # self.spp = SPP()
-        # self.latlayer = nn.Sequential(
-        #     nn.Conv2d(1280, 256, 1, 1, 0),
-        #     # DropBlock2D(block_size=3, drop_prob=0.3),  # 加入DropBlock2D 防止过拟合
-        # )
-        # self.latlayer1 = nn.Sequential(
-        #     nn.Conv2d(1024, 256, 1, 1, 0),
-        #     # DropBlock2D(block_size=3, drop_prob=0.3),  # 加入DropBlock2D 防止过拟合
-        # )
-        # self.latlayer2 = nn.Sequential(
-        #     nn.Conv2d(512, 256, 1, 1, 0),
-        #     # DropBlock2D(block_size=3, drop_prob=0.3),  # 加入DropBlock2D 防止过拟合
-        # )
-        #
-        # final_out_filter = num_anchors * (5 + num_classes)
-        # self.yolo_head3 = yolo_head([256, 512], final_out_filter)
-        # self.yolo_head2 = yolo_head([256, 256], final_out_filter)
-        # self.yolo_head1 = yolo_head([256, 128], final_out_filter)
-
     def _make_layer(self, planes, blocks, stride=1):
         downsample = None  # 初始化变量
         if stride != 1 or self.inplanes != 4 * planes:
@@ -121,10 +101,6 @@ class ResNet(nn.Module):
             layers.append(Bottleneck(self.inplanes, planes))
         return nn.Sequential(*layers)
 
-    # def _upsample_add(self, x, y):
-    #     _, _, H, W = y.shape
-    #     return F.upsample(x, size=(H, W), mode='bilinear') + y
-
     def forward(self, x):
         x = self.conv_bn_relu(x)
         c1 = self.maxpool(x)
@@ -134,17 +110,6 @@ class ResNet(nn.Module):
         c5 = self.layer4(c4)
 
         return c5, c4, c3
-
-        # p5 = self.toplayer(c5)
-        # p5 = self.spp(p5)
-        # p5 = self.latlayer(p5)
-        # p4 = self._upsample_add(p5, self.latlayer1(c4))
-        # p3 = self._upsample_add(p4, self.latlayer2(c3))
-        #
-        # p5 = self.yolo_head3(p5)
-        # p4 = self.yolo_head2(p4)
-        # p3 = self.yolo_head1(p3)
-        # return p5, p4, p3
 
 
 def ResNets(pretrained, **kwargs):
