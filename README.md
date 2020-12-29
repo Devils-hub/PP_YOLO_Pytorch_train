@@ -16,7 +16,15 @@
 * Pytorch1.3
 * CUDA10.0
 
-training:
+Install
+-------
+### Clone and install
+
+1.git clone [https://github.com/Devils-hub/PP_YOLO_Pytorch_train.git](https://github.com/Devils-hub/PP_YOLO_Pytorch_train.git)
+
+2.Codes are based on Python3
+
+Training
 ---------
 
 1.用labelimg标注自己的数据集为VOC格式
@@ -29,7 +37,7 @@ training:
 
 5.接下来就可以用trains.py进行训练了，不过要将代码中的路径改为自己的路径，并且将我的绝对路径改为你自己的绝对路径，把上面得到的锚框和得到的标签信息加入进去，就可以进行训练了
 
-test:
+Test
 -----
 
 
