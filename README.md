@@ -3,7 +3,8 @@
 
 提取码：yolo 
 
-# Training:
+raining:
+--------
 
 1.用labelimg标注自己的数据集为VOC格式
 
