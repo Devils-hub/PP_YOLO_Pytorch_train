@@ -40,9 +40,9 @@ Training
 Detect
 -----
 
-(```Python
+```Python
 detect.py
-```)
+```
 
 链接：https://pan.baidu.com/s/1Hm0awb9exJVbM39dQj7MxQ 
 
