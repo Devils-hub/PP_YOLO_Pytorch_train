@@ -1,7 +1,4 @@
 # PP_YOLO_train
-链接：https://pan.baidu.com/s/1Hm0awb9exJVbM39dQj7MxQ 
-
-提取码：yolo 
 
 实现功能
 -------
@@ -10,6 +7,14 @@
 * 进行网络结构的搭建
 * 对自己数据集锚框的聚类
 * 对网络模型的训练和预训练
+
+测试运行的环境
+------------
+
+* Windows10
+* Python3.7
+* Pytorch1.3
+* CUDA10.0
 
 training:
 ---------
@@ -26,3 +31,8 @@ training:
 
 test:
 -----
+
+
+链接：https://pan.baidu.com/s/1Hm0awb9exJVbM39dQj7MxQ 
+
+提取码：yolo 
