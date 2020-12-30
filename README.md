@@ -37,7 +37,9 @@ Training
 
 5.接下来就可以用trains.py进行训练了，不过要将代码中的路径改为自己的路径，并且将我的绝对路径改为你自己的绝对路径，把上面得到的锚框和得到的标签信息加入进去，就可以进行训练了
 ```Python
-trains.py '-anchors', default="./model_data/anchors.txt" '-classes', default="./model_data/class_name.txt" '-annotation', default="./my_train.txt"
+trains.py '-anchors', default="./model_data/anchors.txt" 
+          '-classes', default="./model_data/class_name.txt" 
+          '-annotation', default="./my_train.txt"
 ```
 
 Detect
