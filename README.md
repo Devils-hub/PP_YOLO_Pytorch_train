@@ -27,7 +27,7 @@ Install
 Training
 ---------
 
-1.用labelimg标注自己的数据集为VOC格式，自己从头进行数据集的采集与标注，也可使用现有的VOC格式的数据集
+1.用labelimg标注自己的数据集为VOC格式，也可使用现有的VOC格式的数据集
 
 2.用kmeans_for_anchors.py进行聚类获取数据的锚框
 
