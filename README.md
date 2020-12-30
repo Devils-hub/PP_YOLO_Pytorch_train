@@ -28,7 +28,7 @@ Training
 ---------
 
 自己从头进行数据集的采集与标注
->1.用labelimg标注自己的数据集为VOC格式
+1.用labelimg标注自己的数据集为VOC格式
 2.用kmeans_for_anchors.py进行聚类获取数据的锚框
 3.在使用voc2yolo3.py将数据集分为训练集和测试集
 4.用voc_annotation.py得到数据的位置和信息
