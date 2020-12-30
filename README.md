@@ -51,8 +51,8 @@ detect.py '-model_path', default="./models/Epoch22-Total_Loss18.8616-Val_Loss18.
           '-anchors_path', default='./model_data/voc07_12anchors.txt'
 ```
 
-文件下载
--------
+DownLoad
+--------
 
 链接：https://pan.baidu.com/s/1Hm0awb9exJVbM39dQj7MxQ 
 
